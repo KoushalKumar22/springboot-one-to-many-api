@@ -45,8 +45,13 @@ public class AuthorController {
     }
 
     @DeleteMapping("/del/{id}")
-    public String deleteById(@PathVariable int id){
-        arepo.deleteById(id);
-        return "data Deleted";
+    public String deleteById(@PathVariable int id) {
+        Optional<Author> author = arepo.findById(id);
+        if (author.isPresent()) {
+            arepo.delete(author.get());
+            return "Author and associated books deleted";
+        } else {
+            return "Author not found";
+        }
     }
 }
