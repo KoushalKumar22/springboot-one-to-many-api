@@ -27,7 +27,7 @@ This project demonstrates a simple Spring Boot application with a one-to-many bi
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/KoushalKumar22/Spring-boot-one-to-one-api.git
+   git clone https://github.com/KoushalKumar22/springboot-one-to-many-api.git
    cd springboot-one-to-many-api
 
 2. Build the project:
