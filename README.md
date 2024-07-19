@@ -1,4 +1,4 @@
-# Spring-boot-one-to-one-api
+# Spring-boot-one-to-many-api
 
 This project demonstrates a simple Spring Boot application with a one-to-many bidirectional relationship between `Author` and `Books` entities. The application includes CRUD operations and allows testing through Postman.
 ## Features
