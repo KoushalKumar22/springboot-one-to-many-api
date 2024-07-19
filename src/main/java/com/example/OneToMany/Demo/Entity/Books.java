@@ -25,6 +25,9 @@ public class Books {
         this.author = author;
     }
 
+    public Books() {
+    }
+
     public int getId() {
         return id;
     }

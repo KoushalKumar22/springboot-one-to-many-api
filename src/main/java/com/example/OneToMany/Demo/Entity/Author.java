@@ -12,16 +12,19 @@ public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
-    String name;
+    String author;
 
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
     @JsonIgnoreProperties("author")
     List<Books> books;
 
-    public Author(int id, String name, List<Books> books) {
+    public Author(int id, String author, List<Books> books) {
         this.id = id;
-        this.name = name;
+        this.author = author;
         this.books = books;
+    }
+
+    public Author() {
     }
 
     public int getId() {
@@ -32,12 +35,12 @@ public class Author {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public List<Books> getBooks() {
